@@ -6,10 +6,12 @@ if the volume is new then the default generated password will be displayed in th
 `docker build -t jenkins .`
 
 2. we need to create a docker volume to persist the data using
-`docker volume create jenkins_volume`
+```docker volume create jenkins_volume```
 
 3. now we can run the container by
-`docker run -p 8080:8080 -p 50000:50000 -v jenkins_volume:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins`
+```
+docker run -p 8080:8080 -p 50000:50000 -v jenkins_volume:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins
+```
 
 4. The dashboard will be available at :8080 
 
